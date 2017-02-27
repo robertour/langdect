@@ -1,0 +1,2 @@
+# langdect
+A language detector
