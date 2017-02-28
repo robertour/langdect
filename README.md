@@ -1,20 +1,20 @@
 # langdect
 A language detector
 
-# Brief Explanation
+### Brief Explanation
 This code uses an adaptation of the vector space model to ngrams in text
 documents in order to detect languages.
 
 The code is still experimental and just a proof of concept.
 
-# Requirements
+### Requirements
 
 Python 3.5.2 (older versions haven't been tested but it is likely that it 
 will work)
 numpy
 scipy
 
-# Usage
+### Usage
 Just run the code inside the langdect folder with the max number of ngrams 
 desired as a parameter. Depending on this paramenter it might take a few 
 seconds to load
@@ -24,15 +24,17 @@ seconds to load
 Then introduce the text for which you want to detect the language. Usually
 it gives good results for a paragraph of text
 
-# Testing (Idea)
+### Testing (Idea)
 An alternatively and seemingly quicker way to index the dictionaries and
 reduce dimensionalities is provided by 
 
     python3 nongram.py 3
 
-Here, the characters inside the ngrams are ignored
+Here, the characters inside the ngrams are ignored, I called nongrams. For 
+example the text "hello" would have the following nongrams of size 3: 
+h_l, e_l, l_o. 
 
-# Implementation details where improvements are possible/required
+### Implementation details where improvements are possible/required
 
 1. there is no control of stop words
 2. the only characters controlled are '\n' and ' '
@@ -43,6 +45,6 @@ files
 5. you can include more languages by copying and pasting more translations of
 the Human Rights Declaration 
 
-# Data set of documents
+### Data set of documents
 The documents are the translation of the Human Rights Declaration taken from 
 here: http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx
