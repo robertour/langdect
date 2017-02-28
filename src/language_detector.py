@@ -100,15 +100,9 @@ class LanguageDetector(object):
                             ngram_buff[b] = ngram_buff[b][1:]
 
                         if len(ngram_buff[b]) == b+1:
-#                            if b+1 < 3:
                             self.add_ngram(ngram_buff[b], self.ngrams)
                             self.add_ngram(ngram_buff[b], self.ngrams_doc[doc])
 
-                            #if there is at least 3 charactes in the ngram
-#                            else:
-#                                n_gram = ngram_buff[b][0] + '_' * (b-1) + ngram_buff[b][b]
-#                                self.add_ngram(n_gram, self.ngrams)
-#                                self.add_ngram(n_gram, self.ngrams_doc[doc])
 
     def calculate_inverse_document_frequency(self):
         """ Calculate the inverse document frequency using the presence
